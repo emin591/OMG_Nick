@@ -10,7 +10,7 @@ namespace OMG_Nick
     {
         private IView view;
         private IController controller;
-        IView IModel.View { set => throw new NotImplementedException(); }
-        IController IModel.Controller { set => throw new NotImplementedException(); }
+        IView IModel.View { set => view=value; }
+        IController IModel.Controller { set => controller=value; }
     }
 }

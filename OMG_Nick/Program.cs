@@ -19,7 +19,21 @@ namespace OMG_Nick
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new View());
+
+            model =new Model();
+            view=new View();
+            controller = new Controller();
+
+            model.View = view;
+            model.Controller = controller;
+
+            view.Model = model;
+            view.Controller = controller;
+
+            controller.Model = model;
+            controller.View = view;
+                        
+            Application.Run((View)view);
         }
     }
 }

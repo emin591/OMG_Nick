@@ -20,17 +20,17 @@ namespace OMG_Nick
             InitializeComponent();
         }
 
-        IModel IView.model { set => throw new NotImplementedException(); }
-        IController IView.controller { set => throw new NotImplementedException(); }
+        IModel IView.Model { set => model=value; }
+        IController IView.Controller { set => controller=value; }
 
         void IView.anzeigen(int ggt)
         {
-            throw new NotImplementedException();
+            textBoxGGT.Text = ggt.ToString();
         }
 
         private void buttonGGTBerechnen_Click(object sender, EventArgs e)
         {
-
+            controller.gGTBestimmen(Convert.ToInt32(textBoxZahl1.Text), Convert.ToInt32(textBoxZahl2.Text));
         }
     }
 }

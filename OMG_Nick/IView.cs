@@ -4,8 +4,8 @@ namespace OMG_Nick
 {
     internal interface IView
     {
-        IModel model { set; }
-        IController controller { set; }
+        IModel Model { set; }
+        IController Controller { set; }
         void anzeigen(int ggt);
     }
 }

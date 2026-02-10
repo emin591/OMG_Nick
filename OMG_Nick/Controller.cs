@@ -11,12 +11,12 @@ namespace OMG_Nick
         private IModel model;
         private IView view;
 
-        IModel IController.model { set => throw new NotImplementedException(); }
-        IView IController.view { set => throw new NotImplementedException(); }
+        IModel IController.Model { set => model=value; }
+        IView IController.View { set => view=value; }
 
         void IController.gGTBestimmen(int zahl1, int zahl2)
         {
-            throw new NotImplementedException();
+            view.anzeigen(zahl2 + zahl1);
         }
     }
 }

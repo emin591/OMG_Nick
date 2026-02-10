@@ -2,8 +2,8 @@
 {
     internal interface IController
     {
-        IModel model { set; }
-        IView view { set; }
+        IModel Model { set; }
+        IView View { set; }
         void gGTBestimmen(int zahl1, int zahl2);
     }
 }
